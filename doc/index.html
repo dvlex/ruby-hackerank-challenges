@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.9.37
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "README";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'><h1 id="ruby-on-rails-dev-container-template">Ruby on Rails Dev Container Template</h1>
+
+<p>This repository provides a <strong>VS Code Dev Container</strong> setup for rapid Ruby on Rails development using Docker Compose. It includes a ready-to-use Ruby/Rails environment and a PostgreSQL database, plus a modern shell experience with Zsh and plugins.</p>
+
+<h2 id="features">Features</h2>
+
+<ul>
+<li><strong>VS Code Dev Containers</strong>: Seamless development with <a href="https://code.visualstudio.com/docs/devcontainers/containers">Dev Containers</a>.</li>
+<li><strong>Docker Compose</strong>: Spins up both a Ruby/Rails development container and a PostgreSQL database container.</li>
+<li><strong>Zsh &amp; Plugins</strong>: Enjoy Zsh with <a href="https://ohmyz.sh/">Oh My Zsh</a>, syntax highlighting, and autosuggestions.</li>
+<li><strong>No Rails Project Included</strong>: Start your Rails app from scratch, choosing only the tools you need.</li>
+</ul>
+
+<h2 id="rails-tools-you-can-select-when-creating-a-new-app">Rails Tools You Can Select When Creating a New App</h2>
+
+<p>When you run <code>rails new</code>, you can choose to include or skip various tools and frameworks, such as:</p>
+
+<ul>
+<li><strong>Tailwind CSS</strong> (<code>--css tailwind</code>)</li>
+<li><strong>Bootstrap</strong> (<code>--css bootstrap</code>)</li>
+<li><strong>Sass</strong> (<code>--css sass</code>)</li>
+<li><strong>Stimulus</strong> (<code>--javascript esbuild</code> or <code>--javascript importmap</code>)</li>
+<li><strong>Hotwire</strong> (Turbo &amp; Stimulus, enabled by default)</li>
+<li><strong>RSpec</strong> (add manually or via template)</li>
+<li><strong>Minitest</strong> (default)</li>
+<li><strong>Webpack</strong> (legacy, not recommended for new apps)</li>
+<li><strong>Action Mailbox</strong></li>
+<li><strong>Action Text</strong></li>
+<li><strong>Active Storage</strong></li>
+<li><strong>System Tests</strong></li>
+<li><strong>API-only mode</strong> (<code>--api</code>)</li>
+<li><strong>Skip Active Record</strong> (<code>--skip-active-record</code>)</li>
+<li><strong>Skip Test</strong> (<code>--skip-test</code>)</li>
+<li><strong>Skip Hotwire</strong> (<code>--skip-hotwire</code>)</li>
+</ul>
+
+<h2 id="basic-rails-cli-commands">Basic Rails CLI Commands</h2>
+
+<ul>
+<li><code>rails new &lt;app_name&gt; [options]</code> — Create a new Rails app</li>
+<li><code>rails server</code> — Start the Rails development server</li>
+<li><code>rails console</code> — Open the Rails console</li>
+<li><code>rails db:create</code> — Create the database</li>
+<li><code>rails db:migrate</code> — Run database migrations</li>
+<li><code>rails generate &lt;generator&gt;</code> — Generate code (models, controllers, etc.)</li>
+<li><code>rails test</code> or <code>rspec</code> — Run tests</li>
+</ul>
+
+<h2 id="recommended-command-to-start-a-new-rails-app-with-postgresql-tailwind">Recommended Command to Start a New Rails App (with PostgreSQL &amp; Tailwind)</h2>
+
+<p>Inside the dev container terminal, run:</p>
+
+<pre class="code sh"><code class="sh">rails new . --database=postgresql --css=tailwind
+</code></pre>
+
+<p>This will:</p>
+
+<ul>
+<li>Create a new Rails app in the current directory</li>
+<li>Configure it to use PostgreSQL as the database</li>
+<li>Set up Tailwind CSS for styling</li>
+</ul>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<ol>
+<li><p><strong>Open in VS Code</strong>
+Use &quot;Open Folder in Container&quot; or the &quot;Reopen in Container&quot; prompt.</p></li>
+<li><p><strong>Start Services</strong>
+Docker Compose will automatically start both the Rails and PostgreSQL containers.</p></li>
+<li><p><strong>Create Your Rails App</strong>
+Open a terminal in VS Code and run the recommended <code>rails new</code> command above.</p></li>
+<li><p><strong>Configure Database</strong>
+Update your <code>config/database.yml</code> if needed to match the PostgreSQL service settings.</p></li>
+<li><p><strong>Enjoy Zsh</strong>
+The terminal uses Zsh with plugins for a modern shell experience.</p></li>
+</ol>
+
+<h2 id="setup-the-postgresdb-after-generate-the-rails-app">Setup the postgresDB after generate the rails app</h2>
+
+<ol>
+<li>Go to the config/database.yml file</li>
+<li>in the default or any env, the credentiasl should looks like
+<code>yaml
+default: &amp;default
+adapter: postgresql
+encoding: unicode
+# For details on connection pooling, see Rails configuration guide
+# https://guides.rubyonrails.org/configuring.html#database-pooling
+pool: &lt;%= ENV.fetch(&quot;RAILS_MAX_THREADS&quot;) { 5 } %&gt;
+username: &lt;%= ENV[&#39;ENV_USERNAME&#39;] %&gt;
+password: &lt;%= ENV[&#39;ENV_PASSWORD&#39;] %&gt;
+host: &lt;%= ENV[&#39;ENV_HOST&#39;] %&gt;
+port: 5432
+</code></li>
+<li>create an .env file in root directory with this:
+<code>yaml
+ENV_USERNAME=postgres
+ENV_PASSWORD=postgres
+ENV_HOST=localhost
+</code></li>
+<li>and to the gemfile the next lines:
+<code>rb
+# Load environment variables from .env files
+gem &quot;dotenv-rails&quot;, groups: [ :development, :test ]
+</code></li>
+<li>in the console type the next:
+<code>sh
+rails db:setup
+</code></li>
+<li>and that&#39;s it, you now have setuped up the db</li>
+</ol>
+
+<hr>
+
+<p><strong>Tip:</strong>
+You can customize your Rails app with additional options as needed. See <code>rails new --help</code> for more.</p>
+</div></div>
+
+      <div id="footer">
+  Generated on Mon Oct  6 20:20:14 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.37 (ruby-3.4.5).
+</div>
+
+    </div>
+  </body>
+</html>

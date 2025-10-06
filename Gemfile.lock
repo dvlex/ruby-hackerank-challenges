@@ -2,7 +2,9 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.3)
+    date (3.4.1)
     diff-lcs (1.6.2)
+    erb (5.0.2)
     json (2.15.0)
     language_server-protocol (3.17.0.5)
     lint_roller (1.1.0)
@@ -11,8 +13,16 @@ GEM
       ast (~> 2.4.1)
       racc
     prism (1.5.1)
+    psych (5.2.6)
+      date
+      stringio
     racc (1.8.1)
     rainbow (3.1.1)
+    rdoc (6.15.0)
+      erb
+      psych (>= 4.0.0)
+      tsort
+    redcarpet (3.6.1)
     regexp_parser (2.11.3)
     rspec (3.13.1)
       rspec-core (~> 3.13.0)
@@ -42,17 +52,23 @@ GEM
       parser (>= 3.3.7.2)
       prism (~> 1.4)
     ruby-progressbar (1.13.0)
+    stringio (3.1.7)
+    tsort (0.2.0)
     unicode-display_width (3.2.0)
       unicode-emoji (~> 4.1)
     unicode-emoji (4.1.0)
+    yard (0.9.37)
 
 PLATFORMS
   aarch64-linux
   ruby
 
 DEPENDENCIES
+  rdoc
+  redcarpet
   rspec (~> 3.13)
   rubocop
+  yard
 
 BUNDLED WITH
    2.6.9
